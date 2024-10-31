@@ -1,22 +1,21 @@
+// loader.js
 const fs = require('fs');
 const path = require('path');
 
-const args = process.argv.slice(2);
-if (args.length === 0) {
-    console.error('No AMSL file specified.');
+const filePath = process.argv[2];
+if (!filePath) {
+    console.error('Please provide a file path');
     process.exit(1);
 }
 
-const amslFile = args[0];
-const amslFilePath = path.resolve(amslFile);
-
-fs.readFile(amslFilePath, 'utf8', (err, data) => {
+const fullPath = path.resolve(filePath);
+fs.readFile(fullPath, 'utf8', (err, data) => {
     if (err) {
-        console.error(`Error reading file ${amslFilePath}:`, err);
+        console.error('Error reading file:', err);
         process.exit(1);
     }
 
-    // Here you would add the logic to interpret and execute the AMSL code
-    console.log(`Executing AMSL script: ${amslFilePath}`);
+    // Simulate AMSL execution
+    console.log(`Executing AMSL script: ${fullPath}`);
     console.log(data);
 });

@@ -24,5 +24,9 @@
     },
     "engines": {
         "vscode": ">=0.9.0-pre.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TDWolff/AMSL-TDWolff.git"
     }
 }
