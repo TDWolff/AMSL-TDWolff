@@ -1,0 +1,23 @@
+{
+    "scopeName": "source.amsl",
+    "fileTypes": ["amsl"],
+    "patterns": [
+        {
+            "name": "keyword.control.amsl",
+            "match": "\\b(if|while|for|return)\\b"
+        },
+        {
+            "name": "string.quoted.double.amsl",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.amsl",
+                    "match": "\\\\."
+                }
+            ]
+        }
+    ],
+    "repository": {},
+    "scope": "source.amsl"
+}

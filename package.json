@@ -1,0 +1,28 @@
+{
+    "name": "amsl",
+    "version": "0.0.1",
+    "publisher": "TDWolff",
+    "icon": "images/logo.png",
+    "main": "./out/extension.js",
+    "activationEvents": [
+        "onLanguage:amsl"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "amsl",
+                "extensions": [".amsl"]
+            }
+        ],
+        "grammars": [
+            {
+                "language": "amsl",
+                "scopeName": "source.amsl",
+                "path": "./syntaxes/amsl.tmLanguage"
+            }
+        ]
+    },
+    "engines": {
+        "vscode": ">=0.9.0-pre.1"
+    }
+}
